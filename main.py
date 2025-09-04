@@ -30,19 +30,5 @@ async def process_workqueue(workqueue: Workqueue):
 
 
 if __name__ == "__main__":
-    ats = AutomationServer.from_environment()
-
-    workqueue = ats.workqueue()
-
-    # Initialize external systems for automation here..
-
-    # Queue management
-    if "--queue" in sys.argv:
-        workqueue.clear_workqueue("new")
-        asyncio.run(populate_queue(workqueue))
-        exit(0)
 
     logger.info("Hello world!")
-
-    # Process workqueue
-    asyncio.run(process_workqueue(workqueue))
