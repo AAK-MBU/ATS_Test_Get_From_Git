@@ -31,4 +31,4 @@ async def process_workqueue(workqueue: Workqueue):
 
 if __name__ == "__main__":
 
-    logger.info("Hello world!")
+    print("Hello world!")
