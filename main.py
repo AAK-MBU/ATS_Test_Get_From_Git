@@ -42,5 +42,7 @@ if __name__ == "__main__":
         asyncio.run(populate_queue(workqueue))
         exit(0)
 
+    logger.info("Hello world!")
+
     # Process workqueue
     asyncio.run(process_workqueue(workqueue))
